@@ -3,6 +3,8 @@ let sec = document.querySelector(".seconds")
 let min = document.querySelector(".minutes")
 let hr = document.querySelector(".hours")
 
+let time  = document.querySelector(".time")
+
 
 
 let s =   0
@@ -13,6 +15,8 @@ function startWatch(){
 
 interval = setInterval(function(){
     start.disabled = true
+    time.style.border = "6px solid green"
+    time.style.transition = ".3s"
 s++
 
 
@@ -67,6 +71,8 @@ else{
 
 function stopWatch(){
     start.disabled = false
+    time.style.border = "6px solid red"
+    time.style.transition = ".5s"
 
     clearInterval(interval)
 }
@@ -75,6 +81,9 @@ function stopWatch(){
 function resetWatch(){
    
     start.disabled = false
+
+    time.style.border = "6px solid blue"
+    time.style.transition = ".5s"
   s = 0
   m = 0
 h = 0
